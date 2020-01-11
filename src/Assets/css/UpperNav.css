@@ -1,0 +1,45 @@
+/*=====================================================*/
+/*css for upperNav section...contain all upperNav 
+  css for Be A member and SignOut with className="member"
+  and for signIn and signUp form with className="form" */
+/*======================================================*/
+
+/*css for be A Member and SignOut*/
+.member {
+  color: rgb(11, 10, 12);
+  font-size: inherit ;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px green;
+  padding: 3px;
+  text-decoration: none;
+}
+.member:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/*css for signIn and signUp */
+.form {
+  color: black;
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2x;
+  padding: 4px;
+  text-decoration: none;
+}
+.form:hover {
+  background-color: #007bff;
+}
+
+.tress {
+  font-size: 20;
+  font-weight: 700;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*======================================*/
+/*End of  css for upperNav section*/
+/*=======================================*/

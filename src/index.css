@@ -1,0 +1,189 @@
+/*=====================================================*/
+/*css for index.css section...contain all css section for body
+  mainly for dashboard and its components*/
+/*======================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+  box-sizing: border-box;
+}
+
+/*css for body section*/
+body {
+ 
+  min-height: 10vh;
+  display: flex;
+  font-weight: 400;
+  font-family: 'Fira Sans', sans-serif;
+  overflow-x: hidden;
+ 
+}
+
+
+h1,h2,h3,h4,h5,h6,label,span {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body, html, .App, #root, .auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-light {
+  background-color:  whitesmoke;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 200px;
+  
+}
+.nav-link{
+  margin-right: auto;
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all .3s;
+  margin-top: 70px;
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #3c8dbc;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
+}
+
+
+.content-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+/*css for Main*/
+.main-area {
+  padding-top: 46px;
+  flex: 1;
+  background: #edf1f7;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  overflow-x: hidden;
+  justify-content: space-between;
+
+}
+
+/*css for Map section*/
+#maps{
+ 
+  border:2px solid rgb(224, 223, 223);
+
+ 
+}
+#mapscard{
+  margin: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 530px;
+}
+#CardTitle{
+  text-decoration-color: #167bff;
+  font-size:45px;
+  font-style: bold;
+  color:rgb(52, 54, 56);
+  font-weight:600;
+  text-align: end;
+  
+}
+#CardSubtitle{
+
+  text-align: end;
+
+}
+
+/*css for Alert section*/
+#alertcard{
+
+  text-decoration-color: #167bff;
+  font-size:80px;
+  font-size: larger;
+  color:black;
+  font-weight: 400;
+
+ 
+  
+}
+#alertmain{
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  height: 300px;
+}
+#Cards {
+  margin: 15px;
+  height: 380px;
+  
+}
+
+#Card {
+ margin: 15px;
+ margin-top: -10px;
+}
+
+#SCard{
+  margin: 15px; 
+}
+
+#teamcard{
+  margin: 15px;  
+}
+
+
+#dashboard{
+  color: #4c4c52;
+  margin-left: -45px;
+  padding: 0px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+
+/*End of css for index.css section*/
+

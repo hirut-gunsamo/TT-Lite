@@ -1,0 +1,115 @@
+/*=====================================================*/
+    /*css for sideNav section*/
+/*======================================================*/
+
+#link {
+  text-decoration: none;
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 1.1em;
+  padding: 0.6em;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: inline-flexbox;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 80px;
+ 
+ 
+}
+#link:hover {
+  color:white;
+  font-weight: 100;
+  font-stretch: condensed;
+}
+.sidenav {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -16px 900px 200px 140px rgba(35, 36, 77, 0.2);
+  width: 200px;
+  position: relative;
+  background-color:rgba(0,0,0,.7);
+  left: 0px;
+  text-align: center;
+  transition: 0.8s ease;
+  list-style-type: none;
+  /* height: auto; */
+
+
+  transition: all 0.2s ease-out;
+  @media screen and (min-width: 992px)
+<style>
+.left-side {
+    top: 50px;
+}
+}
+.dash {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(230, 226, 226);
+  margin-right: 12px;
+  margin-left: -10px;
+  margin-top: -25px;
+  font-size: 1.5em;
+  padding: 0.6em;
+  color:whitesmoke;
+  overflow-anchor:1;
+
+}
+
+.aler {
+  margin-left: -58px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 1.1em;
+  padding: 0.6em;
+  color:whitesmoke;
+}
+.sign {
+  margin-left: -30px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 1.1em;
+  padding: 0.6em;
+  color:whitesmoke;
+  
+}
+.data {
+  margin-left: -30px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 1.1em;
+  padding: 0.6em;
+  color:whitesmoke;
+ 
+}
+.login {
+  margin-left: -30px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 1.1em;
+  padding: 0.6em;
+  color:whitesmoke;
+}
+.maps {
+  margin-left: -70px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 1.1em;
+  padding: 0.6em;
+  color:whitesmoke;
+}
+.payment {
+  margin-left: -32px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 1.1em;
+  padding: 0.6em;
+  color:whitesmoke;
+}
+/*=====================================================*/
+     /*End of sideNav css section*/
+/*======================================================*/
