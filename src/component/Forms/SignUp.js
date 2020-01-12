@@ -1,6 +1,5 @@
 //import features displayed on signup
 import React, { Component } from "react";
-import { BrowserRouter as Link } from "react-router-dom";
 import "../../index.css";
 import Nav from "../Nav/FormNav";
 import "../../Assets/css/UpperNav.css";
@@ -64,8 +63,8 @@ export default class SignUp extends Component {
               >
                 SignUp
               </button>
-              <p className="">
-                Already registered <Link to="/Forms/Login.js">Sign in?</Link>
+              <p className="forgot-password text-right">
+              Already registered <a href="#">sign in?</a>
               </p>
             </form>
           </div>

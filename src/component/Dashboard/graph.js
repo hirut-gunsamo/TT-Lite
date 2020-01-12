@@ -1,7 +1,7 @@
 //import features displayed on graph
-import React from "../../../node_modules/react";
-import { Card, CardBody, CardTitle, Col, Row } from "../../../node_modules/reactstrap";
-import { Line } from "../../../node_modules/react-chartjs-2";
+import React from "react";
+import { Card, CardBody, CardTitle, Col, Row } from "reactstrap";
+import { Line } from "react-chartjs-2";
 
 //Line chart
 let lineData = {

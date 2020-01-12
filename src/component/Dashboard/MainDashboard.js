@@ -1,4 +1,4 @@
-import React from "../../../node_modules/react";
+import React from "react";
 import {
   Card,
   CardText,
@@ -7,20 +7,21 @@ import {
   CardSubtitle,
   Row,
   Col
-} from "../../../node_modules/reactstrap";
+} from "reactstrap";
 
 //import features displayed on main Dashboard;
 import SimpleMap from "./Map";
+import Footer from "../Footer";
 import AlertMain from "../Alert/alert";
 import Team from "./Team";
 import DataLogMain from "../Datalog/datalog";
-import { MdNotificationsNone } from "../../../node_modules/react-icons/md";
+import { MdNotificationsNone } from "react-icons/md";
 import Smart_sensor from "../../Assets/images/big/Smart_sensor-512.png";
 import images from "../../Assets/images/big/imagesm.png";
 import imagesp from "../../Assets/images/big/imagesp.png";
 import SensorSummary from "./graph";
 
-/*! 
+     /*! 
       MainDashboard section *
      */
 class MainDashboard extends React.Component {

@@ -1,6 +1,6 @@
 //import features displayed on this simple map
-import React, { Component } from "../../../node_modules/react";
-import { Map, Marker, GoogleApiWrapper } from "../../../node_modules/google-maps-react";
+import React, { Component } from "react";
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
 /*! *************
  * Simple Map section *

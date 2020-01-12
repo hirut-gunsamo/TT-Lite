@@ -1,13 +1,13 @@
 //import features displayed on dashboard
-import React from "../../../node_modules/react";
+import React from "react";
 import {
-  BrowserRouter as 
+  BrowserRouter as Router, 
   Switch,
   Route,
-} from "../../../node_modules/react-router-dom";
+} from "react-router-dom";
 import {Row,
   Col
-} from "../../../node_modules/reactstrap";
+} from "reactstrap";
 
 import SideNav from "../Nav/SideNav";
 import MainDashboard from "../Dashboard/MainDashboard";
@@ -71,4 +71,5 @@ export default function Dashboard({ history, match }) {
       </div>
     </div>
   );
-}
+ }
+

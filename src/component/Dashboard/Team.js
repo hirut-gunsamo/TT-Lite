@@ -5,15 +5,15 @@
   /*--------------------------------------------------------------------------------*/
 
 
-import React from "../../../node_modules/react";
+import React from "react";
 import jsotomayor from "../../Assets/images/Team/jsotomayer.jpg";
 import isoulee from "../../Assets/images/Team/isoulee.jpg";
 import zelbastami from "../../Assets/images/Team/zelbastami.jpg";
 import cmcGladebouchard from "../../Assets/images/Team/cmcGladebouchard.jpg";
 import ariosyu from "../../Assets/images/Team/ariosyu.jpg";
 
-import { Card, CardBody, CardTitle, Table } from "../../../node_modules/reactstrap";
-import { Button } from "../../../node_modules/reactstrap";
+import { Card, CardBody, CardTitle, Table } from "reactstrap";
+import { Button } from "reactstrap";
 import "../../index.css";
 
 
