@@ -1,13 +1,13 @@
 //import features displayed on dashboard
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router, 
   Switch,
   Route,
-} from "react-router-dom";
+} from 'react-router-dom';
 import {Row,
   Col
-} from "reactstrap";
+} from 'reactstrap';
 
 import SideNav from "../Nav/SideNav";
 import MainDashboard from "../Dashboard/MainDashboard";
@@ -28,13 +28,13 @@ import logo from "../../Assets/images/logo.jpg";
 import Team from "./Team";
 
 export default function Dashboard({ history, match }) {
-  const token = JSON.parse(localStorage.getItem("token"));
-  if (!token) {
-    history.push("/");
+  const token =localStorage.getItem("token");
+  if (token === 'null') {
+    history.push("/sign-in");
   }
 
   const onSignOut = () => {
-    localStorage.setItem("token", 0);
+    localStorage.setItem("token", null);
     history.push("/");
   };
 

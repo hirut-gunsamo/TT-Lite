@@ -2,7 +2,7 @@
 //import features displayed on FormNav
 /*============================================*/
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
@@ -22,8 +22,8 @@ const Example = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   const onSignOut = () => {
-    localStorage.setItem("token", 0);
-    props.history.push("/");
+    localStorage.setItem("token", null);
+    props.history.push("/sign-in");
   };
   /*=================================================*/
   /* FormNav section include signIn and signUp*/

@@ -1,6 +1,6 @@
 //import features displayed on Mainalert page
-import React, { Component } from "react";
-import { Card, CardBody, Table } from "reactstrap";
+import React, { Component } from 'react';
+import { Card, CardBody, Table } from 'reactstrap';
 
 /*! *************
  *Main ALert section...*

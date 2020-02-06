@@ -3,29 +3,33 @@ import React, { Component } from 'react';
 import "../../index.css";
 import Nav from "../Nav/FormNav";
 import "../../Assets/css/UpperNav.css";
-import axios from 'axios'
+import axios from 'axios';
 
 export default class SignUp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      First_name: null,
+      Last_name: null,
+      email: null,
+      password: null
+    };
+  }
   onSubmit = () => {
-    //this.props.history.push("/sign-in");
-    console.log("sign up submitted")
-    // axios.post('http://localhost:4000/user',{
-    //   username:"User firs name",
-    //   email: "example@gmail.com",
-    //   password:"user_password"
-    // }).then((response)=>{
-    //   console.log(response);
-    // }).catch((error)=>{
-    //   console.log(error);
-    // })
-    axios.get('http://localhost:4000/user/:2')
-    .then((response)=>{
-      console.log("This is response:",response);
+    const { FirstName, Last_name, email, password } = this.state;
+    // this.props.history.push("/sign-in");
+    axios.post('http://localhost:3000/user/signup', {
+      First_name: FirstName,
+      Last_name: Last_name,
+      password: password,
+      email:email,
     })
-    .catch((err)=>{
-      console.log("This is error: ",err);
+    .then((response)=>{
+      console.log(response);
+    })
+    .catch((error)=>{
+      console.log(error);
     });
-    
   };
   /*! *************
    *Nav and form section for sign up*
@@ -40,29 +44,43 @@ export default class SignUp extends Component {
               <h3>Sign Up</h3>
 
               <div className="form-group">
-                <label>User name</label>
+                <label>First name</label>
                 <input
                   type="text"
+                  onChange={(event) => this.setState({ FirstName: event.target.value})}
+
                   className="form-control"
                   placeholder="First name"
                 />
               </div>
-
               <div className="form-group">
-                <label>Email address</label>
+                <label>Last name</label>
                 <input
                   type="text"
+                  onChange={(event) => this.setState({Last_name:event.target.value})}
+
                   className="form-control"
                   placeholder="Last name"
                 />
               </div>
 
               <div className="form-group">
-                <label>Password</label>
+                <label>Email address</label>
                 <input
                   type="email"
+                  onChange={(event) => this.setState({ email: event.target.value })}
                   className="form-control"
-                  placeholder="Enter email"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Password</label>
+                <input
+                  type="password"
+                  onChange={(event) => this.setState({ password: event.target.value })}
+                  className="form-control"
+                  placeholder="password"
                 />
               </div>
 
@@ -70,8 +88,9 @@ export default class SignUp extends Component {
                 <label>Confirm Password</label>
                 <input
                   type="password"
+                  onChange={(event) => this.setState({ password: event.target.value })}
                   className="form-control"
-                  placeholder="Enter password"
+                  placeholder="confirm password"
                 />
               </div>
 

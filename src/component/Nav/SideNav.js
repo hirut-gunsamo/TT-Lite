@@ -3,8 +3,8 @@
     like icons, links and others*
    ************************************************ */
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import "../../index.css";
 import "../../Assets/css/sideNav.css";
 import { FaEye, FaMapMarkerAlt, FaProductHunt, FaPaypal } from "react-icons/fa";

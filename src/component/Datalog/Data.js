@@ -1,5 +1,5 @@
 //import features displayed on Datalog page
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardBody,
@@ -7,7 +7,7 @@ import {
   CardSubtitle,
   Input,
   Table
-} from "reactstrap";
+} from 'reactstrap';
 
 class Projects extends React.Component {
   constructor(props) {

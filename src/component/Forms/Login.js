@@ -1,21 +1,51 @@
 //import  features used in Sign in
-import React, { Component } from "react";
-import { BrowserRouter as Link, withRouter } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Link, withRouter } from 'react-router-dom';
+import axios from 'axios';
 import Nav from '../Nav/FormNav'
 import "../../Assets/css/UpperNav.css";
+
 
 class Login extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      email: null,
+      password: null
+    };
 
-    if (JSON.parse(localStorage.getItem("token"))) {
+
+
+    if (localStorage.getItem("token") !== 'null') {
       props.history.push("/dashboard");
     }
   }
 
-  onSubmit = () => {
-    localStorage.setItem("token", 1);
-    this.props.history.push("/dashboard");
+  onSubmit = (e) => {
+    e.preventDefault();
+    // this.props.history.push("/dashboard");
+    const { email, password } = this.state;
+    // this.props.history.push("/sign-in");
+    axios.post('http://localhost:3000/user/login', {
+      email:email,
+      password: password,
+    })
+    .then((response)=>{
+      console.log(response.data);
+      if (response.data.success) {
+        // save the token
+        localStorage.setItem('token', response.data.access_token)
+        this.props.history.push('/dashboard');
+      } else {
+        const error = new Error(response.data.error);
+        this.props.history.push('/sign-in');
+        throw error;
+      }
+      console.log(response);
+    })
+    .catch((error)=>{
+      console.log(error);
+    });
   };
   /*! *************
    *Nav and form section for sign in*
@@ -33,6 +63,7 @@ class Login extends Component {
                 <label>Email address</label>
                 <input
                   type="email"
+                  onChange={(event) => this.setState({ email: event.target.value })}
                   className="form-control"
                   placeholder="Enter email"
                 />
@@ -42,6 +73,7 @@ class Login extends Component {
                 <label>Password</label>
                 <input
                   type="password"
+                  onChange={(event) => this.setState({ password: event.target.value })} 
                   className="form-control"
                   placeholder="Enter password"
                 />
@@ -65,7 +97,6 @@ class Login extends Component {
 
               <button
                 onClick={this.onSubmit}
-                type="submit"
                 className="btn btn-primary btn-block"
               >
                 Submit

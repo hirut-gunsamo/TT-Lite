@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardText,
@@ -7,7 +7,7 @@ import {
   CardSubtitle,
   Row,
   Col
-} from "reactstrap";
+} from 'reactstrap';
 
 //import features displayed on main Dashboard;
 import SimpleMap from "./Map";

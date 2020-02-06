@@ -1,6 +1,6 @@
 //import features displayed on this simple map
-import React, { Component } from "react";
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import React, { Component } from 'react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 /*! *************
  * Simple Map section *

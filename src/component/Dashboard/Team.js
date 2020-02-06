@@ -5,7 +5,7 @@
   /*--------------------------------------------------------------------------------*/
 
 
-import React from "react";
+import React from 'react';
 import jsotomayor from "../../Assets/images/Team/jsotomayer.jpg";
 import isoulee from "../../Assets/images/Team/isoulee.jpg";
 import zelbastami from "../../Assets/images/Team/zelbastami.jpg";

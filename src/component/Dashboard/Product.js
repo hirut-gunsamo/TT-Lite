@@ -2,7 +2,9 @@
  *import features displayed on product section*
  ************************************************ */
 import React, { Component } from "react";
-import trespass from "../../Assets/images/tresssss.png";
+import trespass from "../../Assets/images/trespass.jpg";
+// import trespass from "../../Assets/images/users/";
+
 import "../../index.css";
 
 export default class Product extends Component {

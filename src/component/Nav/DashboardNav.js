@@ -1,7 +1,7 @@
 /* ********************************************** */
 //import features displayed on DashboardNav
 /* ********************************************** */
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
@@ -10,8 +10,8 @@ import {
   Nav,
   NavItem,
   NavLink
-} from "reactstrap";
-import { withRouter } from "react-router-dom";
+} from 'reactstrap';
+import { withRouter } from 'react-router-dom';
 import logo from "../../Assets/images/logo.jpg";
 import "../../Assets/css/UpperNav.css";
 
@@ -21,8 +21,8 @@ const Example = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   const onSignOut = () => {
-    localStorage.setItem("token", 0);
-    props.history.push("/");
+    localStorage.setItem("token", null);
+    props.history.push("/sign-in");
   };
   /*! *************
    * DashboardNav section *
