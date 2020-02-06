@@ -89,7 +89,7 @@ export default class MainAlert extends Component {
                         className="mb-0 font-16 font-medium"
                         style={{ fontFamily: "Arail", fontSize: 20 }}
                       >
-                        Sensor 3
+                        Sensor 7
                       </h6>
                     </div>
                   </td>
@@ -115,7 +115,7 @@ export default class MainAlert extends Component {
                         className="mb-0 font-16 font-medium"
                         style={{ fontFamily: "Arail", fontSize: 20 }}
                       >
-                        Sensor 4
+                        Sensor 8
                       </h6>
                     </div>
                   </td>
@@ -141,7 +141,7 @@ export default class MainAlert extends Component {
                         className="mb-0 font-16 font-medium"
                         style={{ fontFamily: "Arail", fontSize: 20 }}
                       >
-                        Sensor 5
+                        Sensor 4
                       </h6>
                     </div>
                   </td>
@@ -167,7 +167,33 @@ export default class MainAlert extends Component {
                         className="mb-0 font-16 font-medium"
                         style={{ fontFamily: "Arail", fontSize: 20 }}
                       >
-                        Sensor 6
+                        Sensor 5
+                      </h6>
+                    </div>
+                  </td>
+                  <td>
+                    <span
+                      class="badge"
+                      style={{
+                        border: "2px solid green",
+                        background: "green",
+                        color: "white"
+                      }}
+                    >
+                      Off
+                    </span>
+                  </td>
+
+                  <td>June 9, 2019 09:08am</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="">
+                      <h6
+                        className="mb-0 font-16 font-medium"
+                        style={{ fontFamily: "Arail", fontSize: 20 }}
+                      >
+                        Sensor 23
                       </h6>
                     </div>
                   </td>
@@ -181,6 +207,58 @@ export default class MainAlert extends Component {
                       }}
                     >
                       Off
+                    </span>
+                  </td>
+
+                  <td>June 9, 2019 09:08am</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="">
+                      <h6
+                        className="mb-0 font-16 font-medium"
+                        style={{ fontFamily: "Arail", fontSize: 20 }}
+                      >
+                        Sensor 34
+                      </h6>
+                    </div>
+                  </td>
+                  <td>
+                    <span
+                      class="badge"
+                      style={{
+                        border: "2px solid red",
+                        background: "red",
+                        color: "white"
+                      }}
+                    >
+                      Off
+                    </span>
+                  </td>
+
+                  <td>June 9, 2019 09:08am</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div className="">
+                      <h6
+                        className="mb-0 font-16 font-medium"
+                        style={{ fontFamily: "Arail", fontSize: 20 }}
+                      >
+                        Sensor 10
+                      </h6>
+                    </div>
+                  </td>
+                  <td>
+                    <span
+                      class="badge"
+                      style={{
+                        border: "2px solid green",
+                        background: "green",
+                        color: "white"
+                      }}
+                    >
+                      On
                     </span>
                   </td>
 

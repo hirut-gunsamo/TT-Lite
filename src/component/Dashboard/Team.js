@@ -48,7 +48,7 @@ class Team extends React.Component {
                   <td>Joel Sotomayor</td>
                   <td
                     className="blue-grey-text  text-darken-4 font-medium"
-                    style={{ color: "black" }}
+                    style={{ color: "red" }}
                   >
                     CEO & president
                   </td>
@@ -64,7 +64,7 @@ class Team extends React.Component {
                   <td>Idris Soule</td>
                   <td
                     className="blue-grey-text  text-darken-4 font-medium"
-                    style={{ color: "black" }}
+                    style={{ color: "red" }}
                   >
                     CTO
                   </td>
@@ -80,7 +80,7 @@ class Team extends React.Component {
                   <td>Zak El-Bastami</td>
                   <td
                     className="blue-grey-text  text-darken-4 font-medium"
-                    style={{ color: "black" }}
+                    style={{ color: "red" }}
                   >
                     Software Developer
                   </td>
@@ -98,10 +98,10 @@ class Team extends React.Component {
                     </div>
                   </td>
 
-                  <td>Cameron McGlade-Bouchard</td>
+                  <td>Cameron McGlade</td>
                   <td
                     className="blue-grey-text  text-darken-4 font-medium"
-                    style={{ color: "black" }}
+                    style={{ color: "red" }}
                   >
                     Research Analyst
                   </td>
@@ -117,7 +117,7 @@ class Team extends React.Component {
                   <td>Arios Yu</td>
                   <td
                     className="blue-grey-text  text-darken-4 font-medium"
-                    style={{ color: "black" }}
+                    style={{ color: "red" }}
                   >
                     Hardware Engineer
                   </td>
@@ -125,7 +125,7 @@ class Team extends React.Component {
                 <tr>
                   <td></td>
                   <td>
-                    <Button variant ="info">+Member</Button>
+                    <Button variant ="success">+Member</Button>
                   </td>
                   <td></td>
                 </tr>

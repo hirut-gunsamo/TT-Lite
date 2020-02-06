@@ -1,104 +1,118 @@
 //import features displayed on alert page
 import React from "react";
-import { UncontrolledAlert, Row, Col } from "reactstrap";
-import "../../index.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import '../../index.css';
 
-class AlertMain extends React.Component {
-  constructor(props) {
-    super(props);
+function AlertMain() {
+  function Notify1() {
+    toast("Sensor 1 triggered april 12,2018 at 12:01am", {
+       //toast will be closed after 10 seconds
+       autoClose: 10000
+       
+    });
 
-    this.toggle10 = this.toggle10.bind(this);
-    this.toggle20 = this.toggle20.bind(this);
-    this.toggle30 = this.toggle30.bind(this);
-    this.toggle40 = this.toggle40.bind(this);
-    this.onDismiss = this.onDismiss.bind(this);
-    this.state = {
-      tooltipOpen10: false,
-      tooltipOpen20: false,
-      tooltipOpen30: false,
-      tooltipOpen40: false,
-      visible: true
-    };
+  }
+  function Notify() {
+    toast("Sensor 2 triggered june 18,2019 at 09:01am", {
+       //toast will be closed after 15 seconds
+       autoClose: 15000
+    });
+
+  }
+  function Notify2() {
+    toast("Sensor 7 triggered feb 8,2020 at 3:09pm", {
+       //toast will be closed after 10 seconds
+       autoClose: 10000
+    });
+
+  }
+  function Notify12() {
+    toast("Sensor 8 triggered sep 21,2020 at 10:08am", {
+       //toast will be closed after 12 seconds
+       autoClose: 12000
+    });
+
+  }
+  function Notify3() {
+    toast("Sensor 4 was triggered mar 28,2020 at 5:10pm", {
+       //toast will be closed after 10 seconds
+       autoClose: 10000
+    });
+
   }
 
-  onDismiss() {
-    this.setState({
-      visible: false
+  function Notify13() {
+    toast("Sensor 5 was triggered oct 28,2020 at 8:19pm", {
+       //toast will be closed after 14 seconds
+       autoClose: 14000
+    });
+
+  }
+  function Notify4() {
+    toast("Sensor 23 triggered jan 16,2019 at 1:19am", {
+       //toast will be closed after 11 seconds
+       autoClose: 11000
     });
   }
-  toggle10() {
-    this.setState({
-      tooltipOpen10: !this.state.tooltipOpen10
+  function Notify14() {
+    toast("Sensor 34 triggered apr 26,2019 at 11:10pm", {
+       //toast will be closed after 10 seconds
+       autoClose: 10000
     });
   }
+    function Notify5() {
+      toast("Sensor 5 triggered sep 09,2020 at 4:49pm", {
+         //toast will be closed after 12seconds
+         autoClose: 12000
+      });
 
-  toggle20() {
-    this.setState({
-      tooltipOpen20: !this.state.tooltipOpen20
-    });
   }
 
-  toggle30() {
-    this.setState({
-      tooltipOpen30: !this.state.tooltipOpen30
+  function Notify15() {
+    toast("Sensor 10 triggered sep 09,2018 at 4:49pm", {
+       //toast will be closed after 11 seconds
+       autoClose: 11000
     });
-  }
 
-  toggle40() {
-    this.setState({
-      tooltipOpen40: !this.state.tooltipOpen40
-    });
-  }
+}
+function Notify6() {
+  toast("Sensor 15 triggered aug 09,2019 at 01:20pm", {
+     //toast will be closed after 10 seconds
+     autoClose: 10000
+  });
 
-  render() {
-    return (
-      /*--------------------------------------------------------------------------------*/
-      /* this alert section include notification that is, which alert was triggered and at what time                                                    */
-      /*--------------------------------------------------------------------------------*/
-      <div>
-        <Row>
-          <Col sm="12">
-            <div>
-              <UncontrolledAlert color="danger" fade={false}>
-                <h6>Sensor 2</h6>
-                <p>
-                  triggered <br />
-                  march 5, 2019 at 12:09am
-                </p>
-              </UncontrolledAlert>
-            </div>
-            <div>
-              <UncontrolledAlert color="primary" fade={false}>
-                <h6>Sensor 7</h6>
-                <p>
-                  {" "}
-                  triggered <br /> feb 8, 2019 at 6:09pm
-                </p>
-              </UncontrolledAlert>
+}
+function Notify16() {
+  toast("Sensor 35 triggered sep 09,2020 at 4:49pm", {
+     //toast will be closed after 20 seconds
+     autoClose: 20000
+  });
 
-              <UncontrolledAlert color="warning" fade={false}>
-                <h6>Sensor 8</h6>
-                <p>
-                  triggered <br /> dec 7, 2019 at 7:49pm
-                </p>
-              </UncontrolledAlert>
-
-              <UncontrolledAlert color="success" fade={false}>
-                <h6>Sensor 4</h6>
-                <p>
-                  triggered
-                  <br /> sep 8, 2019 at 9:00am
-                </p>
-              </UncontrolledAlert>
-            </div>
-          </Col>
-        </Row>
+}
+  return (<div className="AlertMain">
+    <div >
+      <ToastContainer />
+      <button onClick={Notify1} className="s1">sensor1</button>
+      <button onClick={Notify} className="s11">sensor2</button>
+      <button onClick={Notify2} className="s2">sensor7</button>
+      <button onClick={Notify12} className="s12">sensor8</button>
+      <button onClick={Notify3} className="s3">sensor4</button>
+      <button onClick={Notify13} className="s13">sensor5</button>
+      <button onClick={Notify4} className="s4">sensor23</button>
+      <button onClick={Notify14} className="s14">sensor34</button>
+      <button onClick={Notify5} className="s5">sensor10</button>
+      <button onClick={Notify15} className="s15">sensor15</button>
+      <button onClick={Notify6} className="s6">sensor35</button>
+      <button onClick={Notify16} className="s16">sensor28</button>
       </div>
+    </div>
+    
+  
+  );
+}
       /*-------------------------------------*/
       /* End of alert section */
       /*-------------------------------------*/
-    );
-  }
-}
-
+   
 export default AlertMain;

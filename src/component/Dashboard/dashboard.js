@@ -51,7 +51,7 @@ export default function Dashboard({ history, match }) {
             <Route path="/dashboard/alert" component={MainAlert} />
             <Route path="/dashboard/data-log" component={DataLog} />
             <Route path="/dashboard/Map" component={Map} />
-            <Route path="/dashboard/products" component={Product} />
+            <Route path="/dashboard/product" component={Product} />
             <Route path="/dashboard/sensor" component={Sensor} />
             <Route path="/dashboard/members" component={Team} />]
             <Route path="/dashboard/payment" component={Payment} />

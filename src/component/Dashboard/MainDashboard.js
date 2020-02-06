@@ -100,7 +100,7 @@ class MainDashboard extends React.Component {
                 <CardTitle id="alertcard">
                   <i className="mdi mdi-comment-processing-outline mr-2"></i>
                   <MdNotificationsNone />
-                  Notifications
+                   Notifications
                 </CardTitle>
                 <CardText id="alertmain">
                   <AlertMain />

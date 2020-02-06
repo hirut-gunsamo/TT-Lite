@@ -5,7 +5,7 @@ import { Line } from "react-chartjs-2";
 
 //Line chart
 let lineData = {
-  labels: [1, 3, 5,7, 9, 12, 15, 20],
+  labels: [1, 5, 24,29, 30, 16, 20, 30],
   datasets: [
     {
       label: "triggered",
@@ -14,7 +14,7 @@ let lineData = {
       borderColor: "rgb(94,114,228)",
       pointBorderColor: "rgb(94,114,228)",
       pointBackgroundColor: "rgb(94,114,228)",
-      data: [2, 3, 4, 8, 10, 12, 18, 24]
+      data: [1, 3, 9, 28, 12, 6, 28, 10]
     },
     {
       label: "not triggered",
@@ -23,7 +23,7 @@ let lineData = {
       borderColor: "rgb(79,195,247)",
       pointBorderColor: "rgb(79,195,247)",
       pointBackgroundColor: "rgb(79,195,247)",
-      data: [0, 8, 11, 22, 8, 10, 5, 21]
+      data: [0, 7, 24, 30, 20, 28, 35, 30]
     }
   ]
 };

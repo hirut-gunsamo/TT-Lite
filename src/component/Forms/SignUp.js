@@ -1,12 +1,31 @@
 //import features displayed on signup
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import "../../index.css";
 import Nav from "../Nav/FormNav";
 import "../../Assets/css/UpperNav.css";
+import axios from 'axios'
 
 export default class SignUp extends Component {
   onSubmit = () => {
-    this.props.history.push("/sign-in");
+    //this.props.history.push("/sign-in");
+    console.log("sign up submitted")
+    // axios.post('http://localhost:4000/user',{
+    //   username:"User firs name",
+    //   email: "example@gmail.com",
+    //   password:"user_password"
+    // }).then((response)=>{
+    //   console.log(response);
+    // }).catch((error)=>{
+    //   console.log(error);
+    // })
+    axios.get('http://localhost:4000/user/:2')
+    .then((response)=>{
+      console.log("This is response:",response);
+    })
+    .catch((err)=>{
+      console.log("This is error: ",err);
+    });
+    
   };
   /*! *************
    *Nav and form section for sign up*
