@@ -8,6 +8,7 @@ import axios from 'axios';
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
+    console.log('history', props.history)
     this.state = {
       First_name: null,
       Last_name: null,
@@ -15,7 +16,8 @@ export default class SignUp extends Component {
       password: null
     };
   }
-  onSubmit = () => {
+  onSubmit = (e) => {
+    e.preventDefault();
     const { FirstName, Last_name, email, password } = this.state;
     // this.props.history.push("/sign-in");
     axios.post('http://localhost:3000/user/signup', {
@@ -25,7 +27,7 @@ export default class SignUp extends Component {
       email:email,
     })
     .then((response)=>{
-      console.log(response);
+      this.props.history.push("/sign-in");
     })
     .catch((error)=>{
       console.log(error);
