@@ -15,13 +15,11 @@ routes.use(bodyParser.json());
 
 routes.use((req, res, next) => {
   // do logging
-  console.log(`Resource requested: ${req.method} ${req.originalUrl}`);
   next(); // make sure we go to the next routes and don't stop here
 });
 
-
+//this is verification function for token it checks if the token is valid
 const authGuard = (req, res, next) => {
-  console.log('token authorization middleware');
   
   const bearerHeader = req.headers['authorization'];
 
@@ -30,9 +28,7 @@ const authGuard = (req, res, next) => {
       const bearerToken = bearer[1];
       req.token = bearerToken;
   } else {
-    console.log('no bearear')
     return res.sendStatus(403);
-    // return res.writeHead(403);
   }
   
   jwt.verify(req.token, secretkey, (err, authData)=>{
@@ -40,13 +36,15 @@ const authGuard = (req, res, next) => {
     next();
   });
 };
-
+// this response for main "ip:port/" request to check if server is on
 routes.get('/', (req, res) => {
   res.status(200).json({ success: true, message: 'Hello world!' });
 });
-
+//this is user related request redirect to user router
 routes.use('/user', user);
+//this is sensor related requestes redirected to sensor router
 routes.use('/sensor', authGuard, sensor);
+//this is location related requestes redirected to locatio router
 routes.use('/location', authGuard, location);
 
 

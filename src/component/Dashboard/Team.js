@@ -125,7 +125,7 @@ class Team extends React.Component {
                 <tr>
                   <td></td>
                   <td>
-                    <Button variant ="success">+Member</Button>
+                    <Button color="success">+Member</Button>
                   </td>
                   <td></td>
                 </tr>

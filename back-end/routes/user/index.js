@@ -1,11 +1,17 @@
 var express = require('express');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt-nodejs');
-const secret = require('../../config/secret');
+const secret = require('../../config/secret'); // this is secret code which users token is generated
 var router = express.Router({mergeParams: true});
 var user = require('../../models/USER');
 var table_name = "users"
 
+/***************************************************************/
+/*          User related reques is handeled here               */
+/***************************************************************/
+
+
+//this route accept user email and password then if email and password is correct respond verification token 
 router.post('/login', function (req, res, next) {
     if (req.body.email && req.body.password) {
         user.getByEmail(req.body.email, table_name, function (err, rows) {
@@ -18,12 +24,9 @@ router.post('/login', function (req, res, next) {
                 if(!user){
                     res.json("Email incorrect please try agin.")
                 }else{
-                    // console.log("input: ",req.body.password);
-                    // console.log("row.pass :",user.password);
                     bcrypt.compare(req.body.password ,user.password, (error, result)=>{
-                        console.log("result: ", result);
                         if(result && !error){
-                            //sucessfully logged in
+                            //sucessfully logged in 
                             const dataUser = {
                                 id: user.id,
                                 email: user.email,
@@ -58,6 +61,7 @@ router.post('/login', function (req, res, next) {
         });
     }
 })
+//this router register user and hash user password before send to database then respond success if registration is successful
 router.post('/signup', function (req, res, next) {
 
     const passwordHash = bcrypt.hashSync(req.body.password);

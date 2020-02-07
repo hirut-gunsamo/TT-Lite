@@ -6,9 +6,12 @@ var sensor = require('../../models/SENSOR');
 
 var table_name = "sensors"
 
-//get request for sensor with id or without
+/***************************************************************/
+/*          This page handle request related to sensors        */
+/***************************************************************/
 
-router.get('/:id?', verifyToken, function (req, res, next) {
+//this route accept sensor id and token the respond sensor information if requested without id it respond all sensor information
+router.get('/:id?', function (req, res, next) {
     if (req.params.id) {
         sensor.getById(req.params.id, table_name, function (err, rows) {
             if (err) {
@@ -30,46 +33,33 @@ router.get('/:id?', verifyToken, function (req, res, next) {
     }
 })
 
-// post request to insert sensor on to table
+// this router accept sensor information and verification token then respond registered sensor
 
-router.post('/', verifyToken, function (req, res, next) {
-    jwt.verify(req.token, secretkey, (err, authData) => {
+router.post('/', function (req, res, next) {
+    sensor.insert(req.body, table_name, function (err, results) {
         if (err) {
-            // respond Unauthorized request
-            console.log("not allowed")
-            res.sendStatus(403);
-        } else {
-            sensor.insert(req.body, table_name, function (err, results) {
-                if (err) {
-                    res.json(err);
-                }
-                else {
-                    res.json({ id: results.insertId, values: req.body });
-                }
-            });
+            res.json(err);
+        }
+        else {
+            res.json({ id: results.insertId, values: req.body });
         }
     });
+
 });
 
 // delete request with id to delete sensor from database
-router.delete('/:id', verifyToken, function (req, res, next) {
-    jwt.verify(req.token, secretkey, (err, authData) => {
+router.delete('/:id', function (req, res, next) {
+    sensor.delete(req.params.id, table_name, function (err, count) {
         if (err) {
-            // respond Unauthorized request
-            res.sendStatus(403);
-        } else {
-            sensor.delete(req.params.id, table_name, function (err, count) {
-                if (err) {
-                    res.json(err);
-                }
-                else {
-                    res.json(count);
-                }
-
-            });
+            res.json(err);
         }
+        else {
+            res.json(count);
+        }
+
     });
 });
+
 // put request to edit or update sensor on database with id
 router.put('/:id', function (req, res, next) {
 
@@ -83,17 +73,5 @@ router.put('/:id', function (req, res, next) {
     });
 });
 
-function verifyToken(req, res, next) {
-    const bearerHeader = req.headers['authorization'];
 
-    if (typeof bearerHeader !== "undefined") {
-        const bearer = bearerHeader.split(' ');
-        const bearerToken = bearer[1];
-        req.token = bearerToken;
-        next();
-    } else {
-        // res.sendStatus(403);
-        res.writeHead(403);
-    }
-}
 module.exports = router;

@@ -3,7 +3,11 @@ var router = express.Router({mergeParams: true});
 var location = require('../../models/LOCATION');
 
 var table_name = "location";
+/***************************************************************/
+/*          Location related request handeled here             */
+/***************************************************************/
 
+// this route accept location id and responde user information
 router.get('/:id?', function (req, res, next) {
     if (req.params.id) {
         location.getById(req.params.id, table_name, function (err, rows) {
@@ -25,7 +29,7 @@ router.get('/:id?', function (req, res, next) {
         });
     }
 })
-
+//this router register or insert location and the registered information
 router.post('/', function (req, res, next) {
     location.insert(req.body, table_name, function (err, results) {
         if (err) {
@@ -37,6 +41,7 @@ router.post('/', function (req, res, next) {
     });
 });
 
+//this route delete location based on given location id
 router.delete('/:id', function (req, res, next) {
     location.delete(req.params.id, table_name, function (err, count) {
         if (err) {
@@ -49,6 +54,7 @@ router.delete('/:id', function (req, res, next) {
     });
 });
 
+//this route update location information based on given location id
 router.put('/:id', function (req, res, next) {
     location.update(req.params.id, table_name, req.body, function (err, rows) {
         if (err) {

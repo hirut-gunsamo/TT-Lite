@@ -2,7 +2,6 @@
 
 *Description*
 
-Save the RESTFULL data in the table without implementing anything to do a CRUD with the REST Verbs Post, Put, Update and Delete
 
 Install
 ```
@@ -10,18 +9,34 @@ $ npm install
 ```
 **For use exemplo:**
 
- 1. Create a table in data base for exemplo
+ 1. Create a table in data base for exemple
 
  **Creating database and table**
 ```
-USE namedatabase
-CREATE TABLE persons (
-    PersonID int,
-    LastName varchar(255),
-    FirstName varchar(255),
-    Address varchar(255),
-    City varchar(255)
+USE trespass_tracker
+CREATE TABLE users (
+    Id Int, 
+    First_name varchar(255),
+    Last_ame varchar(255),
+    email varchar(255),
+    password varchar(255),
+    Date_of_birth varchar(255)
 );
+CREATE TABLE Location (
+  Location_Id int,
+  Latitude Double,
+  Longitude Double
+);  
+CREATE TABLE sensors (
+  Id int,
+  Status int,
+  Date Date,
+  Time Time,
+  Triggered int,
+  Location_Id int,
+  Sensors_type varchar(255)
+);  
+
 ```
  2. Config a data base connect in dbconnection.js
 
@@ -31,18 +46,16 @@ var connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'password',
-  database: 'namedatabase'
+  database: 'trespass_tracker'
 });
 module.exports = connection;
 ```
  3. Start aplication
 Into folter project make **npm run dev**
-Test http://localhost:3000/up
-Will show info time the server
 
  4. Test with your table
-http://localhost:3000/api/v1/crud?t=persons
+http://localhost:3000/
+result => success: true, 
 
-Where **t** = **table** of the your data base
 
 Thanks!
